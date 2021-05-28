@@ -1,8 +1,11 @@
+/* Variables */
 :root{
     --dark_gray: #545454;
     --light_gray: #f2f3f5;
     --blue: #5ce1e6;
+    --white: #FFFF;
 }
+/* Default */
 *{
     margin: 0;
     padding: 0;
@@ -14,8 +17,13 @@ html{
 }
 body{
     font-size: 1.6rem;
+    color: var(--dark_gray);
 }
+/* Header */
 header{
+    position: fixed;
+    top: 0;
+    z-index: 100;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -23,6 +31,7 @@ header{
     box-shadow: 0 3px 6px 0px rgba(0,0,0,0.16);
     color: var(--dark_gray);
     font-weight: bold;
+    background-color: var(--white);
 }
 .logo img{
     padding: 1rem;
@@ -68,4 +77,65 @@ nav{
     width: 1.5rem;
     cursor: pointer;
     margin-right: 1.5rem;
+    transition: 0.3s;
+}
+#dark_icon:hover{
+    fill: var(--blue);
+}
+
+/* Body */
+.info{
+    width: 30%;
+    margin-top: 20%;
+    margin-left: 10%;
+}
+.info h1{
+    font-size: 5rem;
+}
+.info span{
+    color: var(--blue);
+}
+.info .text_item{
+    font-size: 2.5rem;
+}
+.cv_button{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    background-color: var(--dark_gray);
+    color: var(--white);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cv_button:hover{
+    background-color: var(--blue);
+}
+.img_box{
+    position: absolute;
+    width: 70%;
+    bottom: 0;
+    right: 0;
+    transition: 0.3s;
+}
+.img_box img{
+    position: absolute;
+    bottom: 0;
+    transition: 0.3s;
+}
+.img_box #blue_lines{
+    right: 10%;
+    bottom: 2rem;
+}
+.img_box:hover #blue_lines{
+    right: 9%;
+    bottom: 0rem;
+}
+.img_box #personal_photo{
+    right: 15%;
+}
+.img_box:hover #personal_photo{
+    right: 17%;
 }
