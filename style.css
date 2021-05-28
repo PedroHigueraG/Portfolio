@@ -5,6 +5,10 @@
     --blue: #5ce1e6;
     --white: #FFFF;
 }
+.dark_mode{
+    --dark_gray: #f2f3f5;
+    --light_gray: #545454;
+}
 /* Default */
 *{
     margin: 0;
@@ -18,6 +22,7 @@ html{
 body{
     font-size: 1.6rem;
     color: var(--dark_gray);
+    background-color: var(--light_gray);
 }
 /* Header */
 header{
@@ -31,7 +36,7 @@ header{
     box-shadow: 0 3px 6px 0px rgba(0,0,0,0.16);
     color: var(--dark_gray);
     font-weight: bold;
-    background-color: var(--white);
+    background-color: var(--light_gray);
 }
 .logo img{
     padding: 1rem;
@@ -78,8 +83,20 @@ nav{
     cursor: pointer;
     margin-right: 1.5rem;
     transition: 0.3s;
+    fill: var(--dark_gray);
 }
 #dark_icon:hover{
+    fill: var(--blue);
+}
+#light_icon{
+    display: none;
+    width: 2rem;
+    cursor: pointer;
+    margin-right: 1.5rem;
+    transition: 0.3s;
+    fill: var(--dark_gray);
+}
+#light_icon:hover{
     fill: var(--blue);
 }
 
@@ -88,6 +105,7 @@ nav{
     width: 30%;
     margin-top: 20%;
     margin-left: 10%;
+    transition: 0.3s;
 }
 .info h1{
     font-size: 5rem;
@@ -106,7 +124,7 @@ nav{
     font-size: 3rem;
     font-weight: bold;
     background-color: var(--dark_gray);
-    color: var(--white);
+    color: var(--light_gray);
     cursor: pointer;
     transition: 0.3s;
 }
