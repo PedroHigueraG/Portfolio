@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/Icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Pedro Higuera Portfolio</title>
 </head>
 <body>
-    <header>
+    <header data-aos="fade-down">
         <div class="logo"><a href=""><img src="assets/Icon.svg" alt="Icon of Portfolio"></a></div>
         <nav>
             <ul class="nav_list">
@@ -25,18 +26,22 @@
         </nav>
     </header>
     <main>
-        <div id="home">
-            <div class="info">
-                <h1>I'm <span>Pedro</span> Higuera</h1>
+        <div id="home" >
+            <div class="info" data-aos="fade-right" >
+                <h1 >I'm <span>Pedro</span> Higuera</h1>
                 <p class="text_item">I'm a web developer and this is my official portfolio website</p>
                 <a class="cv_button">Download CV</a>
             </div>
-            <div class="img_box">
-                <img id="blue_lines" src="assets/blueLines.svg">
-                <img id="personal_photo" src="assets/personal.png" alt="Personal_photo">
+            <div class="img_box fadeIn" >
+                <img class="fadeIn" id="blue_lines" src="assets/blueLines.svg">
+                <img  id="personal_photo" src="assets/personal.png" alt="Personal_photo">
             </div>
         </div>
     </main>
     <script src="scripts/darkMode.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
