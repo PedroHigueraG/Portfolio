@@ -2,12 +2,14 @@
 :root{
     --dark_gray: #545454;
     --light_gray: #f2f3f5;
+    --rgba_light_gray: 242,243,245;
     --blue: #5ce1e6;
     --white: #FFFF;
 }
 .dark_mode{
     --dark_gray: #f2f3f5;
     --light_gray: #545454;
+    --rgba_light_gray: 84,84,84;
 }
 /* Default */
 *{
@@ -18,6 +20,7 @@
 html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body{
     font-size: 1.6rem;
@@ -101,9 +104,12 @@ nav{
 }
 
 /* Body */
+#home{
+    height: 100vh;
+}
 .info{
     width: 30%;
-    margin-top: 20%;
+    padding-top: 20%;
     margin-left: 10%;
     transition: 0.3s;
 }
@@ -139,6 +145,7 @@ nav{
     transition: 0.3s;
 }
 .img_box img{
+    height: 80vh;
     position: absolute;
     bottom: 0;
     transition: 0.3s;
@@ -157,7 +164,79 @@ nav{
 .img_box:hover #personal_photo{
     right: 17%;
 }
-/* Animaciones imagenes */
+/* About */
+#about{
+    padding: 5%;
+    height: 100vh;
+    background-image: url(assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.personal_container{
+    background-color: rgba(var(--rgba_light_gray),0.9);;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+    padding: 5rem;
+    margin: 5rem auto;
+}
+.personal_info{
+    display: grid;
+    grid-template-areas: "title title" "photo textp";
+    height: 90%;
+}
+.personal_info h1{
+    grid-area: title;
+    margin-left: 0.7rem;
+}
+.personal_info img{
+    grid-area: photo;
+}
+.personal_p{
+    grid-area: textp;
+    text-align: justify;
+    font-size: 2rem;
+    margin: auto;
+    padding: 2rem;
+}
+.personal_p p{
+    margin-bottom: 1.5rem;
+}
+/* Skills */
+#skills{
+    text-align: center;
+    padding: 5%;
+    height: 100vh;
+    background-image: url(assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.skills_container{
+    padding: 2rem 0rem;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template: repeat(3,20rem) / repeat(3,30%);
+    gap: 2rem;
+    justify-content: center;
+}
+.grid_item{
+    background: var(--light_gray);
+    box-shadow: 0 3px 6px 0px rgba(0,0,0,0.16);
+    border-bottom: 4px solid var(--dark_gray);
+    fill: var(--dark_gray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.svg_icon{
+    width: 10rem;
+}
+.grid_item:hover{
+    border-bottom: 4px solid var(--blue);
+    fill: var(--blue);
+    color: var(--blue);
+}
+/*  Image animations */
 .fadeIn{
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
