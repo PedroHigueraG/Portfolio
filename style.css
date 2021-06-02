@@ -168,73 +168,62 @@ nav{
 #about{
     padding: 5%;
     height: 100vh;
-    background-image: url(assets/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.personal_container{
-    background-color: rgba(var(--rgba_light_gray),0.9);;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
-    padding: 5rem;
-    margin: 5rem auto;
+    display: flex;
+    align-items: center;
 }
 .personal_info{
-    display: grid;
-    grid-template-areas: "title title" "photo textp";
-    height: 90%;
-}
-.personal_info h1{
-    grid-area: title;
-    margin-left: 0.7rem;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 .personal_info img{
-    grid-area: photo;
+    padding: 5rem;
+    background-image: url(assets/about_llines.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.personal_text{
+    margin: 3rem;
 }
 .personal_p{
-    grid-area: textp;
     text-align: justify;
     font-size: 2rem;
-    margin: auto;
-    padding: 2rem;
 }
 .personal_p p{
     margin-bottom: 1.5rem;
 }
 /* Skills */
 #skills{
-    text-align: center;
-    padding: 5%;
     height: 100vh;
-    background-image: url(assets/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.skills_container{
-    padding: 2rem 0rem;
-    width: 80%;
-    margin: 0 auto;
-    display: grid;
-    grid-template: repeat(3,20rem) / repeat(3,30%);
-    gap: 2rem;
-    justify-content: center;
-}
-.grid_item{
-    background: var(--light_gray);
-    box-shadow: 0 3px 6px 0px rgba(0,0,0,0.16);
-    border-bottom: 4px solid var(--dark_gray);
-    fill: var(--dark_gray);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(assets/skills_lines.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#skill_title{
+    font-size: 5rem;
+    padding:  3rem;
+}
+.skills_container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.skill_item{
+    width: 20%;
+    text-align: center;
+}
+.skill_item li{
+    list-style: none;
+    font-size: 1.8rem;
 }
 .svg_icon{
-    width: 10rem;
-}
-.grid_item:hover{
-    border-bottom: 4px solid var(--blue);
-    fill: var(--blue);
-    color: var(--blue);
+    height: 8rem;
+    fill: var(--dark_gray);
 }
 /*  Image animations */
 .fadeIn{
