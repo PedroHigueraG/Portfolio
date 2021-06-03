@@ -102,7 +102,25 @@ nav{
 #light_icon:hover{
     fill: var(--blue);
 }
-
+/* Button */
+#top_button{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1.5rem;
+    background-color: var(--blue);
+    fill: var(--light_gray);
+    transition: 0.3s;
+    opacity: 0;
+    box-shadow: 0 3px 6px 0px rgba(0,0,0,0.16);
+}
+#top_button:hover{
+    fill: var(--dark_gray);
+    transition: 0.3s;
+}
+.svg_up{
+    height: 2rem;
+}
 /* Body */
 #home{
     height: 100vh;
@@ -205,7 +223,7 @@ nav{
     background-size: cover;
 }
 #skill_title{
-    font-size: 5rem;
+    font-size: 4rem;
     padding:  3rem;
 }
 .skills_container{
@@ -224,6 +242,86 @@ nav{
 .svg_icon{
     height: 8rem;
     fill: var(--dark_gray);
+}
+/* Portfolio */
+#portfolio{
+    min-height: 100vh;
+    background-image: url(assets/portfolio_lines.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-top: 5%;
+}
+.portfolio_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 140rem;
+    margin: auto;
+}
+#portfolio_title{
+    font-size: 4rem;
+    border-bottom: 2px solid var(--dark_gray);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 3rem;
+}
+.selector_list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 1rem;
+}
+.active{
+    font-weight: bold;
+}
+.selector_list li{
+    text-decoration: none;
+    color: var(--dark_gray);
+    padding: 1rem;
+    font-size: 2rem;
+}
+.selector_list li:hover{
+    color: var(--dark_gray);
+    font-weight: bold;
+    cursor: pointer;
+}
+.projects_container{
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.project_item{
+    width: 30rem;
+    height: 30rem;
+    margin: 2rem;
+    text-decoration: none;
+    color: var(--dark_gray);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 6px 0px rgba(0,0,0,0.16);
+}
+.project_item img{
+    width: 100%;
+}
+.item_hover{
+    position: absolute;
+    width: 100%;
+    padding: 2rem;
+    color: var(--dark_gray);
+    background-color: var(--light_gray);
+    z-index: 100;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s;
+}
+.project_item:hover .item_hover{
+    opacity: 1;
+    transition: 0.3s;
 }
 /*  Image animations */
 .fadeIn{
