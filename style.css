@@ -323,6 +323,82 @@ nav{
     opacity: 1;
     transition: 0.3s;
 }
+#contact{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/skills_lines.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#contact_title{
+    text-align: center;
+    font-size: 4rem;
+    margin: 1rem;
+    margin-bottom: 4rem;
+}
+.info_contact_container{
+    display: flex;
+    align-items: center;
+    max-width: 85rem;
+    justify-content: space-evenly;
+}
+.contact_text{
+    margin: 3rem;
+    width: 50%;
+}
+.contact_text ul{
+    justify-content: center;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact_text ul li{
+    list-style: none;
+    margin-top: 2rem;
+}
+.contact_text ul li a{
+    text-decoration: none;
+    color: var(--light_gray);
+    padding: 0.8rem;
+    background-color: var(--dark_gray);
+    transition: 0.3s;
+}
+.contact_text ul li a:hover{
+    background-color: var(--blue);
+}
+.contact_form{
+    padding: 2rem;
+    box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.425);
+    width: 40%;
+}
+.contact_form h1{
+    margin-bottom: 1rem;
+}
+.contact_form form{
+    display: flex;
+    flex-direction: column;
+}
+.contact_form form input,textarea{
+    margin-bottom: 1rem;
+    background: none;
+    padding: 1rem;
+    border: solid 1px var(--dark_gray);
+    resize: none;
+}
+.form_button{
+    border: none;
+    background-color: var(--dark_gray);
+    padding: 1rem;
+    color: var(--light_gray);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.form_button:hover{
+    background-color: var(--blue);
+}
 /*  Image animations */
 .fadeIn{
     -webkit-animation-duration: 1s;
