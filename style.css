@@ -53,6 +53,16 @@ header{
 nav{
     display: flex;
 }
+#check{
+    display: none;
+}
+nav #burguer{
+    fill: var(--dark_gray);
+    width: 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: none;
+}
 .nav_list{
     display: flex;
     list-style: none;
@@ -105,6 +115,7 @@ nav{
 /* Button */
 #top_button{
     position: fixed;
+    z-index: 100;
     bottom: 2rem;
     right: 2rem;
     padding: 1.5rem;
@@ -193,7 +204,7 @@ nav{
 #about{
     display: flex;
     padding: 5%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     max-width: 1920px;
@@ -223,7 +234,7 @@ nav{
 }
 /* Skills */
 #skills{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -335,6 +346,7 @@ nav{
     opacity: 1;
     transition: 0.3s;
 }
+/* Contact section */
 #contact{
     min-height: 100vh;
     display: flex;
@@ -384,6 +396,7 @@ nav{
 .contact_form{
     padding: 2rem;
     box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.425);
+    background-color: var(--light_gray);
     width: 40%;
 }
 .contact_form h1{
@@ -431,6 +444,150 @@ nav{
     }
 }
 /* Responsive */
-@media screen {
-    
+/* 1280-1920 */
+@media screen and (max-width: 1919px){
+    .personal_info img{
+        height: 50rem;
+    }
+    .project_item{
+        width: 25rem;
+        height: 25rem;
+    }
+}
+/* 769-1279 */
+@media screen and (max-width:1279px) {
+    .project_item{
+        width: 20rem;
+        height: 20rem;
+    }
+    .personal_info img{
+        height: 40rem;
+    }
+}
+/* 481-768 */
+@media screen and (max-width:880px) {
+    /* Home */
+    .home_container{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .info{
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .info h1{
+        font-size: 3.5rem;
+    }
+    .img_box{
+        width: 100%;
+        height: 40%;
+        margin-top: 8rem;
+    }
+    .img_box img{
+        height: 100%;
+    }
+    /* About */
+    #about{
+        padding-top: 8rem;
+    }
+    .personal_info{
+        flex-direction: column-reverse;
+    }
+    .personal_info img{
+        height: 35rem;
+    }
+    .personal_text p{
+        font-size: 1.6rem;
+    }
+    /* Skills */
+    #skill_title{
+        margin-top: 5rem;
+    }
+    .skills_container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill_item{
+        margin-bottom: 4rem;
+        font-size: 1.2rem;
+    }
+    /* Portfolio */
+    #portfolio{
+        padding-top: 8rem;
+    }
+    .projects_container{
+        justify-content: center;
+        width: 80%;
+        font-size: 1.4rem;
+    }
+    /* Contatct */
+    #contact{
+        padding-top: 8rem;
+    }
+    .info_contact_container{
+        flex-direction: column;
+    }
+    .contact_form{
+        width: 70%;
+    }
+    #portfolio_title{
+        width: 80%;
+    }
+}
+/* 320-480 */
+@media screen and (max-width:560px) {
+    .info h1{
+        font-size: 2.8rem;
+    }
+    .info .text_item{
+        font-size: 1.8rem;
+    }
+    .cv_button{
+        font-size: 2.2rem;
+    }
+    .img_box{
+        width: 100%;
+        height: 40%;
+        
+    }
+    .nav_list{
+        position: fixed;
+        width: 70%;
+        height: 93vh;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: var(--light_gray);
+        box-shadow: 0 3px 6px 0px rgba(0, 0, 0, 0.425);
+        right: -100%;
+        top: 6.9rem;
+        transition: all 0.5s;
+    }
+    nav #burguer{
+        display: block;
+        right: 0;
+    }
+    #check:checked ~ .nav_list{
+        right: 0;
+    }
+    #skills{
+        background-repeat: repeat;
+        background-size: contain;
+    }
+}
+/* 0-319 */
+@media screen and (max-width:319px) {
+    .info h1{
+        font-size: 2.5rem;
+    }
+    .info .text_item{
+        font-size: 1.5rem;
+    }
+    .cv_button{
+        font-size: 2rem;
+    }
 }
